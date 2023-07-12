@@ -1,0 +1,48 @@
+%displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  background-color: green;
+  min-height: 100vh;
+
+  .jokes-container {
+    border: 2px solid white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    text-align: center;
+
+    .joke-text {
+      height: 100%;
+      list-style: none;
+      color: yellow;
+      border: 2px solid white;
+      padding: 15px;
+    }
+  }
+
+  .content {
+    @extend %displayFlex;
+    flex-direction: column;
+    padding: 50px;
+
+    h3 {
+      margin-top: 50px;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 38px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .border {
+      border-bottom: 2px solid white;
+      width: 600px;
+      margin-bottom: 40px;
+    }
+  }
+}
